@@ -4,7 +4,8 @@ import {
   Toolbar,
   Typography,
   Button,
-  CssBaseline
+  CssBaseline,
+  Link
 } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles';
 
@@ -35,6 +36,12 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: '40px',
     borderRadius: '30px',
     marginRight: theme.spacing(1.5)
+  },
+  link: {
+    color: 'inherit',
+    "&:hover": {
+      textDecoration: 'none'
+    }
   }
 }));
 
@@ -48,15 +55,17 @@ function TopBar() {
         <Toolbar>
           <img src={BotImage} className={classes.image} alt="Denky Bot" />
           <Typography variant="h6" className={classes.title}>
-            Grove
+            <Link href="/" className={classes.link}>
+              Grove
+            </Link>
           </Typography>
           <Button
             className={classes.button}
             variant="contained"
-            href="/add"
+            href="/commands"
             color="inherit"
           >
-            Adicionar
+            Comandos
           </Button>
         </Toolbar>
       </AppBar>

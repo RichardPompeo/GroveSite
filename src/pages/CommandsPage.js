@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
   content: {
     width: '80%',
     margin: '0 auto',
-    margin: '100px 0'
+    padding: '100px 0'
   },
   demo: {
     backgroundColor: theme.palette.background.paper,
