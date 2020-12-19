@@ -8,6 +8,7 @@ import {
 import Footer from './components/Footer'
 import TopBar from './components/TopBar'
 import HomePage from './pages/HomePage'
+import CommandsPage from './pages/CommandsPage'
 
 function redirectToAdd() {
   window.open("https://discord.com/oauth2/authorize?client_id=712785958231080990&scope=bot&permissions=8", "_self")
@@ -57,6 +58,7 @@ function Routes() {
           <Route exact path="/github">
             {redirectToGit}
           </Route>
+          <Route exact path="/commands" component={CommandsPage} />
           <Route path="/" component={HomePage} />
         </Switch>
       </Router>
