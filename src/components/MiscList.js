@@ -1,5 +1,6 @@
 import React from 'react'
 import {
+  Divider,
   ListItem,
   ListItemText
 } from '@material-ui/core'
@@ -13,18 +14,21 @@ function MiscList() {
           secondary="Use para ver informações sobre o bot"
         />
       </ListItem>
+      <Divider />
       <ListItem>
         <ListItemText
           primary="effects"
           secondary="Use para ver a configuração do player"
         />
       </ListItem>
+      <Divider />
       <ListItem>
         <ListItemText
           primary="help"
           secondary="Use para obter ajuda"
         />
       </ListItem>
+      <Divider />
       <ListItem>
         <ListItemText
           primary="shards"

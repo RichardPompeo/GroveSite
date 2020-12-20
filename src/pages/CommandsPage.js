@@ -32,6 +32,7 @@ const useStyles = makeStyles((theme) => ({
   },
   demo: {
     backgroundColor: theme.palette.background.paper,
+    border: '1px solid' + theme.palette.secondary.main
   },
   buttons: {
     textTransform: 'none',
