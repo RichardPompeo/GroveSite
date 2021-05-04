@@ -1,27 +1,24 @@
-import Routes from './Routes';
-import {
-  ThemeProvider,
-  createMuiTheme
-} from '@material-ui/core'
+import Routes from "./Routes";
+import { ThemeProvider, createMuiTheme } from "@material-ui/core";
 
 function App() {
   const theme = createMuiTheme({
     palette: {
-      type: 'dark',
+      type: "dark",
       primary: {
-        main: '#b32a12'
+        main: "#b32a12",
       },
       secondary: {
-        main: '#c35c29'
-      }
-    }
-  })
+        main: "#c35c29",
+      },
+    },
+  });
 
   return (
     <ThemeProvider theme={theme}>
       <Routes />
     </ThemeProvider>
-  )
+  );
 }
 
 export default App;

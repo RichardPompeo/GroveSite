@@ -1,43 +1,39 @@
-import React from 'react'
-import { makeStyles } from '@material-ui/core/styles'
-import {
-  Typography,
-  Link,
-  Icon,
-} from '@material-ui/core'
+import React from "react";
+import { makeStyles } from "@material-ui/core/styles";
+import { Typography, Link, Icon } from "@material-ui/core";
 
-import GitHubIcon from '@material-ui/icons/GitHub';
-import { FaDiscord } from 'react-icons/fa'
-import { BiSupport } from 'react-icons/bi'
+import GitHubIcon from "@material-ui/icons/GitHub";
+import { FaDiscord } from "react-icons/fa";
+import { BiSupport } from "react-icons/bi";
 
 const useStyles = makeStyles((theme) => ({
   root: {
     background: theme.palette.background.paper,
-    position: 'relative',
+    position: "relative",
     padding: theme.spacing(2),
   },
   content: {
-    width: '95%',
-    margin: '0 auto',
-    display: 'flex',
-    alignItems: 'center'
+    width: "95%",
+    margin: "0 auto",
+    display: "flex",
+    alignItems: "center",
   },
   icons: {
     marginRight: theme.spacing(2),
   },
   links: {
-    transition: 'all 0.3s',
+    transition: "all 0.3s",
     "&:hover": {
-      color: theme.palette.secondary.main
-    }
+      color: theme.palette.secondary.main,
+    },
   },
   title: {
-    display: 'inline'
-  }
-}))
+    display: "inline",
+  },
+}));
 
 function Footer() {
-  const classes = useStyles()
+  const classes = useStyles();
 
   return (
     <div className={classes.root}>
@@ -45,7 +41,12 @@ function Footer() {
         <Typography variant="h6" className={classes.title}>
           Grove - Todos os direitos reservados.
         </Typography>
-        <Link href="/add" className={classes.links} color="inherit" style={{ marginLeft: 'auto' }}>
+        <Link
+          href="/add"
+          className={classes.links}
+          color="inherit"
+          style={{ marginLeft: "auto" }}
+        >
           <Icon className={classes.icons}>
             <FaDiscord />
           </Icon>
@@ -62,7 +63,7 @@ function Footer() {
         </Link>
       </div>
     </div>
-  )
+  );
 }
 
 export default Footer;

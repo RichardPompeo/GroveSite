@@ -1,37 +1,36 @@
-import React from 'react'
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route
-} from 'react-router-dom'
+import React from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-import Footer from './components/Footer'
-import TopBar from './components/TopBar'
-import HomePage from './pages/HomePage'
-import CommandsPage from './pages/CommandsPage'
+import Footer from "./components/Footer";
+import TopBar from "./components/TopBar";
+import HomePage from "./pages/HomePage";
+import CommandsPage from "./pages/CommandsPage";
 
 function redirectToAdd() {
-  window.open("https://discord.com/oauth2/authorize?client_id=712785958231080990&scope=bot&permissions=8", "_self")
+  window.open(
+    "https://discord.com/oauth2/authorize?client_id=712785958231080990&permissions=0&scope=bot%20applications.commands",
+    "_self"
+  );
 }
 
 function redirectToSupport() {
-  window.open('https://discord.gg/wDPvreyZTU', '_self')
+  window.open("https://discord.gg/wDPvreyZTU", "_self");
 }
 
 function redirectToTop() {
-  window.open('https://top.gg/bot/712785958231080990', '_self')
+  window.open("https://top.gg/bot/712785958231080990", "_self");
 }
 
 function redirectToBfd() {
-  window.open('https://botsfordiscord.com/bot/712785958231080990', '_self')
+  window.open("https://botsfordiscord.com/bot/712785958231080990", "_self");
 }
 
 function redirectToDbl() {
-  window.open('https://discordbotlist.com/bots/grove-150', '_self')
+  window.open("https://discordbotlist.com/bots/grove-150", "_self");
 }
 
 function redirectToGit() {
-  window.open('https://github.com/RichardPompeo/GroveBot', '_self')
+  window.open("https://github.com/RichardPompeo/GroveSlash", "_self");
 }
 
 function Routes() {
@@ -64,7 +63,7 @@ function Routes() {
       </Router>
       <Footer />
     </>
-  )
+  );
 }
 
 export default Routes;

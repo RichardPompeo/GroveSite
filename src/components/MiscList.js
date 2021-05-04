@@ -1,42 +1,40 @@
-import React from 'react'
-import {
-  Divider,
-  ListItem,
-  ListItemText
-} from '@material-ui/core'
+import React from "react";
+import { Divider, ListItem, ListItemText } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core/styles";
+
+const useStyles = makeStyles((theme) => ({
+  command: {
+    "&:hover": {
+      background: theme.palette.background.paper,
+      cursor: "pointer",
+    },
+  },
+}));
 
 function MiscList() {
+  const classes = useStyles();
+
   return (
     <>
-      <ListItem>
+      <ListItem className={classes.command}>
         <ListItemText
-          primary="bot"
-          secondary="Use para ver informações sobre o bot"
+          primary="about"
+          secondary="Use para ver informações do bot."
         />
       </ListItem>
       <Divider />
-      <ListItem>
-        <ListItemText
-          primary="effects"
-          secondary="Use para ver a configuração do player"
-        />
+      <ListItem className={classes.command}>
+        <ListItemText primary="help" secondary="Obtenha ajuda sobre o bot." />
       </ListItem>
       <Divider />
-      <ListItem>
+      <ListItem className={classes.command}>
         <ListItemText
-          primary="help"
-          secondary="Use para obter ajuda"
-        />
-      </ListItem>
-      <Divider />
-      <ListItem>
-        <ListItemText
-          primary="shards"
-          secondary="Veja as informações sobre as Shards"
+          primary="shard-info"
+          secondary="Use para ver informações das shards."
         />
       </ListItem>
     </>
-  )
+  );
 }
 
 export default MiscList;

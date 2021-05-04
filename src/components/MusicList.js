@@ -1,112 +1,121 @@
-import React from 'react'
-import {
-  ListItem,
-  ListItemText,
-  Divider
-} from '@material-ui/core'
+import React from "react";
+import { ListItem, ListItemText, Divider } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core/styles";
+
+const useStyles = makeStyles((theme) => ({
+  command: {
+    "&:hover": {
+      background: theme.palette.background.paper,
+      cursor: "pointer",
+    },
+  },
+}));
 
 function MusicList() {
+  const classes = useStyles();
+
   return (
     <>
-      <ListItem>
+      <ListItem className={classes.command}>
         <ListItemText
           primary="join"
-          secondary="Use para adicionar o bot na chamada"
+          secondary="Use para entrar no canal de voz."
         />
       </ListItem>
       <Divider />
-      <ListItem>
+      <ListItem className={classes.command}>
         <ListItemText
           primary="loop"
-          secondary="Ativa/desativa o loop da música/queue"
+          secondary="Use para ativar o loop da queue/música."
         />
       </ListItem>
       <Divider />
-      <ListItem>
+      <ListItem className={classes.command}>
         <ListItemText
           primary="lyrics"
-          secondary="Busque pela letra de uma música"
+          secondary="Procure pela letra de uma música."
         />
       </ListItem>
       <Divider />
-      <ListItem>
+      <ListItem className={classes.command}>
         <ListItemText
           primary="move"
-          secondary="Mova a posição das músicas"
+          secondary="Use para mover uma música para outra posição."
         />
       </ListItem>
       <Divider />
-      <ListItem>
+      <ListItem className={classes.command}>
         <ListItemText
-          primary="nowplaying"
-          secondary="Veja a música que está tocando no servidor"
+          primary="now-playing"
+          secondary="Use para ver a música que está tocando."
         />
       </ListItem>
       <Divider />
-      <ListItem>
+      <ListItem className={classes.command}>
         <ListItemText
           primary="pause"
-          secondary="Pausa/resume a música"
+          secondary="Use para pausar/resumir a música."
         />
       </ListItem>
       <Divider />
-      <ListItem>
-        <ListItemText
-          primary="play"
-          secondary="Coloque músicas na fila para serem reproduzidas"
-        />
+      <ListItem className={classes.command}>
+        <ListItemText primary="play" secondary="Use para tocar uma música." />
       </ListItem>
       <Divider />
-      <ListItem>
+      <ListItem className={classes.command}>
         <ListItemText
           primary="queue"
-          secondary="Veja a fila de músicas do servidor"
+          secondary="Use para ver a queue do servidor."
         />
       </ListItem>
       <Divider />
-      <ListItem>
+      <ListItem className={classes.command}>
         <ListItemText
           primary="remove"
-          secondary="Remova músicas da queue"
+          secondary="Use para remover uma música da queue."
         />
       </ListItem>
       <Divider />
-      <ListItem>
+      <ListItem className={classes.command}>
         <ListItemText
           primary="search"
-          secondary="Procure por músicas/artistas no YouTube"
+          secondary="Use para pesquisar uma música/artista."
         />
       </ListItem>
       <Divider />
-      <ListItem>
+      <ListItem className={classes.command}>
         <ListItemText
           primary="shuffle"
-          secondary="Embaralhe a queue"
+          secondary="Use para embaralhar a queue."
         />
       </ListItem>
       <Divider />
-      <ListItem>
+      <ListItem className={classes.command}>
         <ListItemText
           primary="skip"
-          secondary="Avançe para a próxima música da queue"
+          secondary="Use para pular a música atual."
         />
       </ListItem>
       <Divider />
-      <ListItem>
+      <ListItem className={classes.command}>
         <ListItemText
           primary="stop"
-          secondary="Faça o bot parar de tocar músicas"
+          secondary="Use para parar de tocar música."
         />
       </ListItem>
       <Divider />
-      <ListItem>
+      <ListItem className={classes.command}>
+        <ListItemText primary="volume" secondary="Use para alterar o volume." />
+      </ListItem>
+      <Divider />
+      <ListItem className={classes.command}>
         <ListItemText
-          primary="volume"
-          secondary="Altere o volume da música"
+          primary="clear-queue"
+          secondary="Use para limpar a queue."
         />
       </ListItem>
     </>
-  )
+  );
 }
 
 export default MusicList;

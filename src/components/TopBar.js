@@ -1,15 +1,15 @@
-import React from 'react'
+import React from "react";
 import {
   AppBar,
   Toolbar,
   Typography,
   Button,
   CssBaseline,
-  Link
-} from '@material-ui/core'
-import { makeStyles } from '@material-ui/core/styles';
+  Link,
+} from "@material-ui/core";
+import { makeStyles } from "@material-ui/core/styles";
 
-import BotImage from '../images/BotImage_auto_x2.jpg'
+import BotImage from "../images/BotImage_auto_x2.jpg";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -29,24 +29,24 @@ const useStyles = makeStyles((theme) => ({
     borderColor: theme.palette.primary.main,
     marginLeft: theme.spacing(1),
     "&:hover": {
-      background: theme.palette.primary.main
-    }
+      background: theme.palette.primary.main,
+    },
   },
   image: {
-    maxWidth: '40px',
-    borderRadius: '30px',
-    marginRight: theme.spacing(1.5)
+    maxWidth: "40px",
+    borderRadius: "30px",
+    marginRight: theme.spacing(1.5),
   },
   link: {
-    color: 'inherit',
+    color: "inherit",
     "&:hover": {
-      textDecoration: 'none'
-    }
-  }
+      textDecoration: "none",
+    },
+  },
 }));
 
 function TopBar() {
-  const classes = useStyles()
+  const classes = useStyles();
 
   return (
     <div className={classes.root}>
@@ -70,7 +70,7 @@ function TopBar() {
         </Toolbar>
       </AppBar>
     </div>
-  )
+  );
 }
 
 export default TopBar;
